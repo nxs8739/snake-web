@@ -82,11 +82,37 @@ git clone https://github.com/nxs8739/snake-web.git
 cd snake-web
 ```
 
+Enter the application directory:
+
+```bash
+cd snake-python-online
+```
+
 Install Flask if necessary:
 
 ```bash
 python3 -m pip install flask
 ```
+
+## Configuration
+
+Flask uses a secret key to identify and secure each browser session.
+
+Before running the application, generate your own secret key:
+
+```bash
+python3 -c "import secrets; print(secrets.token_hex(32))"
+```
+
+Copy the generated string and put it into `app.py`:
+
+```python
+app.secret_key = "YOUR_GENERATED_SECRET_KEY"
+```
+
+Replace `YOUR_GENERATED_SECRET_KEY` with the string you generated.
+
+**Do not use the secret key from this repository, it has been rotated. Also do not share your own secret key publicly.**
 
 Start the application:
 
