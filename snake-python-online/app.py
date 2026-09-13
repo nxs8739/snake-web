@@ -12,7 +12,7 @@ app = Flask(__name__)
 
 
 # Used by Flask to identify each browser session.
-app.secret_key = "d610606cad831e1c464e5c6bdf6d624ef34918175aadcfb15b3ab91e45207811"
+app.secret_key = "REPLACE_WITH_YOUR_GENERATED_SECRET"
 
 
 # ============================================================
